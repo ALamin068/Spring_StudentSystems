@@ -24,5 +24,10 @@ public class StudentController {
         return studentService.getAllStudent();
     }
 
+    @GetMapping("/student/{id}")
+    public Student getUserById(@PathVariable Long id){
+        return studentService.getById(id);
+    }
+
 
 }
